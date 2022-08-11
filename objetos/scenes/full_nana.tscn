@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://objetos/scenes/grabbable.tscn" type="PackedScene" id=1]
+[ext_resource path="res://objetos/scripts/full_nana_shadow.gd" type="Script" id=2]
+[ext_resource path="res://sprites/ingredients/full_nana.svg" type="Texture" id=3]
+[ext_resource path="res://objetos/scripts/full_nana.gd" type="Script" id=4]
+[ext_resource path="res://sprites/ingredients/full_nana_sphere.svg" type="Texture" id=5]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "grab",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "lay",
+"speed": 5.0
+} ]
+
+[node name="full_nana" instance=ExtResource( 1 )]
+script = ExtResource( 4 )
+
+[node name="Collision" parent="." index="0"]
+polygon = PoolVector2Array( 20, 71, 24, 46, 33, 26, 45, 11, 65, 2, 77, -6, 80, -14, 71, -20, 58, -18, 41, -12, 22, 0, 11, 17, 3, 44, 3, 66, 9, 81, 18, 80 )
+
+[node name="Shadow" parent="." index="1"]
+script = ExtResource( 2 )
+
+[node name="Sprite" parent="." index="3"]
+frames = SubResource( 1 )
+animation = "lay"

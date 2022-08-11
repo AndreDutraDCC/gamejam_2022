@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://backgrounds/background_simple.svg" type="Texture" id=1]
+[ext_resource path="res://ambientes/scripts/table.gd" type="Script" id=3]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="table" type="Polygon2D" parent="."]
+color = Color( 1, 1, 1, 0 )
+polygon = PoolVector2Array( 321, 298, 263, 427, 698, 455, 628, 307 )
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 1.1, 1.1 )
+texture = ExtResource( 1 )
+offset = Vector2( 460, 275 )

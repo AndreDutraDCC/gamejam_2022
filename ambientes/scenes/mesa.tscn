@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://backgrounds/background_simple.svg" type="Texture" id=1]
+[ext_resource path="res://objetos/scenes/full_nana.tscn" type="PackedScene" id=2]
+[ext_resource path="res://objetos/scenes/chopped_nana.tscn" type="PackedScene" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="background" type="AnimatedSprite" parent="."]
+position = Vector2( 1, 0 )
+scale = Vector2( 2.2, 2.2 )
+frames = SubResource( 1 )
+offset = Vector2( 260, 50 )
+
+[node name="table limit" type="StaticBody2D" parent="."]
+collision_layer = 2
+
+[node name="Collision" type="CollisionPolygon2D" parent="table limit"]
+polygon = PoolVector2Array( 86, 400, 83, 360, 198, 102, 817, 120, 952, 405, 91, 364, 131, 401, 1022, 453, 838, 97, 189, 79, 58, 362 )
+
+[node name="chopped_nana" parent="." instance=ExtResource( 3 )]
+position = Vector2( 308, 201 )
+
+[node name="full_nana" parent="." instance=ExtResource( 2 )]
+position = Vector2( 623, 250 )
