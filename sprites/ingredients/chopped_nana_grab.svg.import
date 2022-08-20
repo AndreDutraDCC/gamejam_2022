@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/banana_sphere.svg-ffe89ec55cef6d86a5b39c9126a3f297.stex"
+path="res://.import/chopped_nana_grab.svg-f37d4361771d2b4c8ded0039881f8a2a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/ingredients/banana_sphere.svg"
-dest_files=[ "res://.import/banana_sphere.svg-ffe89ec55cef6d86a5b39c9126a3f297.stex" ]
+source_file="res://sprites/ingredients/chopped_nana_grab.svg"
+dest_files=[ "res://.import/chopped_nana_grab.svg-f37d4361771d2b4c8ded0039881f8a2a.stex" ]
 
 [params]
 

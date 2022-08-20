@@ -1,6 +1,6 @@
 extends Node2D
 
-var offset = Vector2(0,100)
+var offset = Vector2(0,20)
 var color = Color(0,0,0,0.5)
 var height = 10
 var width = 30

@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://objetos/scenes/grabbable.tscn" type="PackedScene" id=1]
+[ext_resource path="res://objetos/scripts/knife.gd" type="Script" id=2]
+[ext_resource path="res://sprites/ingredients/knife_lay.svg" type="Texture" id=3]
+[ext_resource path="res://sprites/ingredients/knife_grab.svg" type="Texture" id=4]
+[ext_resource path="res://objetos/scripts/knife_shadow.gd" type="Script" id=5]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "grab",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "lay",
+"speed": 5.0
+} ]
+
+[node name="knife" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="Collision" parent="." index="0"]
+polygon = PoolVector2Array( 43, 48, 50, 50, 54, 34, 53, 7, 46, -21, 28, 75, 30, 82, 36, 83, 42, 76 )
+
+[node name="Shadow" parent="." index="1"]
+script = ExtResource( 5 )
+
+[node name="Sprite" parent="." index="3"]
+frames = SubResource( 1 )
+animation = "lay"
